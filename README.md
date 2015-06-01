@@ -6,6 +6,7 @@ La majoriter des informations sont configurables dans le fichier `input/config.t
 ## Organisation
 
 * `code` contient des extraits de codes pour le rapport.
+
 * `glossaire` contient la liste des définitions présentes dans le glossaire, les fichiers doivent respecter la nomenclature suivante :
 	~~~
 		Nom du terme à définir
@@ -13,8 +14,12 @@ La majoriter des informations sont configurables dans le fichier `input/config.t
 	~~~
 
 * `img` contient les images présentes dans le rapport.
+
 * `input` contient la bibliographie, la configuration, le résumé, les remerciements et un fichier contenant toutes les inclusions de bibliothèques (`preambule.tex`).
+
 * `logo` contient les logo pour la page de garde.
+
 * `model` contient des scripts pour la mise en forme et le model pour la page de garde.
+
 * `part` contient les différentes parties du rapport (donc la majorité du rapport).
 
