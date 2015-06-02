@@ -57,7 +57,7 @@
 
 % ----------------------------------------------------------------------
 % diagramme de Gantt
-\usepackage{model/pgfgantt}
+%\usepackage{model/pgfgantt}
 
 % ----------------------------------------------------------------------
 % pour mettre une page en mode paysage
@@ -115,14 +115,18 @@
 
 % ----------------------------------------------------------------------
 % tableaux
-\definecolor{tablegray}{gray}{0.9}%table
+\definecolor{tablegray}{gray}{0.8}%table
 
 % ----------------------------------------------------------------------
 % importantion de code
 \definecolor{mygray}{rgb}{0.5,0.5,0.5} % définition du gris (n° ligne)
 \usepackage{listings}
 \usepackage{listingsutf8}
-%%%%%%%%%%%%%%%%%%\renewcommand{\thelstlisting}{\thesection.\arabic{lstlisting}}
+
+% pour la numerotation des codes
+\usepackage{chngcntr}
+\AtBeginDocument{\counterwithin{lstlisting}{section}}
+
 \renewcommand{\lstlistlistingname}{Liste des extraits de code}
 %%options for listings
 \DeclareCaptionFont{white}{\color{white}}
@@ -226,16 +230,5 @@
 \newcommand{\ie}{\emph{i.e.}} % car j'abuse souvent des ie, et puisqu'il s'agit d'une abréviation latine il est nécessaire de la mettre en italique
 \newcommand{\eg}{\emph{e.g.}}
 
-
-\newcommand{\stack}{\emph{Stack}}
-\newcommand{\DC}{\texttt{DC-2013}}
-\newcommand{\CC}{CC-IN2P3}
-
-\newcommand{\To}{\texttt{To}}
-\newcommand{\Go}{\texttt{Go}}
-\newcommand{\Po}{\texttt{Po}}
-
 \newcommand{\Cpp}{\emph{C++}}
 \newcommand{\Python}{\emph{Python}}
-
-\usepackage{frcursive}

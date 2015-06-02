@@ -2,7 +2,8 @@ SRC = main
 #REP= ./sources_gnuplot
 
 DEBUG_MODE ?= N
-LATEX = pdflatex --shell-escape
+LATEX = pdflatex --enable-pipes --shell-escape
+EDITOR = gedit
 
 ifeq ($(DEBUG_MODE), Y)
 #LATEX += -interaction=nonstopmode
@@ -83,4 +84,5 @@ one :
 	@egrep -i $(UNDEFINED) $*.log || echo «Aucune»
 
 open:
-	@geany $(SRC).tex part/*.tex &
+	@$(EDITOR) $(SRC).tex part/*.tex &
+

@@ -5,7 +5,7 @@ function table() {
 			\\begin{tabular}{ c c c c c }"
 	while IFS=';' read id col1 col2 col3; do
 			echo "\small\textsf{" $id "} & \small\textsf{" $col1 "} & \small\textsf{" $col2 "} & \small\textsf{" $col3 "} \\\\"
-	done < code/csvFile.csv
+	done < $1
 	echo "\\end{tabular}"
 }
 
@@ -13,12 +13,12 @@ function csv() {
 	echo "\\begin{tabular}{l}"
 	while IFS=';' read line; do
 			echo "\texttt{" $line "} \\\\"
-	done < code/csvFile.csv
+	done < $1
 	echo "\end{tabular}"
 }
 
 case "$1" in
-	"table" ) table ;;
-	"csv" ) csv;;
+	"table" ) table $2;;
+	"csv" ) csv $2;;
 esac
 

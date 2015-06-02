@@ -10,4 +10,46 @@
 	\subsection{Sous-titre de l'étude}
 % ----------------------------------------------------------------------
 
-Étude
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=0.8\textwidth]{img/dott.png}
+		\caption[Exemple de figure]{Exemple de figure. Ici un \emph{fan-art} de \emph{Day of the tentacle}.}
+	\end{figure}
+	
+	\begin{table}[h]%
+		\centering
+		\subfloat[Repr\'esentation des donn\'ees]{%
+			\input{|"model/csvtolatex.sh table code/plop.csv"}
+		}%
+		\hspace{1em}
+		\subfloat[Fichier \texttt{csv} associ\'e]{%
+			\input{|"model/csvtolatex.sh csv code/plop.csv"}
+		}
+		\caption[Représentation d'un tableau et du fichier \texttt{csv} associé]{Exemple de la représentation d'un tableau de données et du fichier \texttt{csv} associé.}%
+	\end{table}
+	
+	\lstinputlisting[language=Python, caption={Lecture d'un fichier \texttt{fits} en \Python}, label={code:readFits}]{code/readFits.py}
+	
+	\begin{algorithm}
+		\caption{Association à voisinage constant}
+		\label{algo:cmp-vois}
+		\begin{algorithmic}[1]
+			\ForAll{Source SDSS}
+				\State Initialisation de $listSDSS$; \Comment{Liste des sources associées à la source SDSS courante}
+				\ForAll{Source Stack}
+					\If{ $Distance(SDSS ; Stack) \leq \epsilon$ }
+						\State Ajout de la source Stack dans $listSDSS$;
+						\Comment{listSDSS est triée par $|\Delta mag|$ croissant}
+					\Else
+						\State Passer à l'élement suivant;
+					\EndIf
+				\EndFor
+
+				\State Sélection du premier élément de $listSDSS$ pour la source SDSS courante;
+
+			\EndFor
+
+			\State Vérification de l'unicité des choix de sources, gestion des erreurs;
+		\end{algorithmic}
+	\end{algorithm}
+
