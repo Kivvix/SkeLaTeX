@@ -9,6 +9,7 @@ echo "
 \\makeatletter
 \\hypersetup
 {
+	bookmarks   = true,
 	pdfauthor   = {\@author},
 	pdfsubject  = {\subject},
 	pdftitle    = {\@title},

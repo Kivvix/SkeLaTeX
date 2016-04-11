@@ -17,7 +17,7 @@
 \
 \vspace{-2cm}
 \begin{changemargin}{-1cm}{-1cm}
-\begin{minipage}{0.51\textwidth}
+\begin{minipage}{0.4\textwidth}
 	\begin{flushleft} \large
 	\begin{singlespace}
 	\includegraphics[height=1cm]{\schoolLogo} \\
@@ -26,29 +26,33 @@
 	\end{singlespace}
 	\end{flushleft}
 \end{minipage}
-~
-\begin{minipage}{0.51\textwidth}
+\hspace{0.25\textwidth}
+\begin{minipage}{0.4\textwidth}
 	\vspace{0.2cm}
 	\begin{flushright}
 	\begin{singlespace}
 	\includegraphics[height=1cm]{\enterpriseLogo} \\
-	{\large \enterpriseName}\\[0.6cm]
+	{\large \enterpriseName}\\[0.2cm]
 	{\normalsize \enterpriseAdress}
 	\end{singlespace}
 	\end{flushright}
 \end{minipage}\\[1cm]
 \end{changemargin}
 
+%%% HEURE DE COMPILATION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\rotatebox{10}{\textcolor{red}{\textsf{ \today{} à \currenttime}}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \center
-{\LARGE \rapportType\\
-\rapportProject\\
+{\LARGE \rapportType\\[-0.25cm]
+\rapportProject\\[0.5cm]
 \filliere}\\[0.5cm]
 
 %\textsc{\large Minor Heading}\\[0.5cm]
 % Title
 \HRule \\[0.4cm]
 { \huge \bfseries \@title}\\
-\HRule \\[1.8cm]
+\HRule \\[1.4cm]
 %\vfill
 % Author
 \begin{minipage}{0.48\textwidth}
@@ -62,16 +66,27 @@
 \begin{minipage}{0.48\textwidth}
 	\begin{flushright} \large
 		\emph{Tuteur} : \, \\
-			D\up{r} \tutor\\
+			\enterpriseTutor\\
 		\emph{Tuteur ISIMA} : \, \\
-			\tutorSchool
+			\schoolTutor
 	\end{flushright}
-\end{minipage}\\[2.5cm]
+\end{minipage}\\[2.0cm]
 ~
 \begin{minipage}{\textwidth}
 	\begin{center}
-	\large Projet de \duration \qquad \@date \\[0.5cm]
-\includegraphics[height=1.8cm]{logo/logo_cnrs_in2p3} \includegraphics[height=1.8cm]{logo/logo_ubp}
+	\large Stage de \duration \qquad \@date \\[0.5cm]
+	\begin{minipage}{0.2\textwidth}
+\centering
+\includegraphics[height=2cm]{logo/logo_em}
+	\end{minipage}\hspace{1cm}\begin{minipage}{0.2\textwidth}
+\centering
+	\vspace{-0.8cm}
+\includegraphics[height=1.2cm]{logo/logo_cnrs}
+	\end{minipage}\hspace{1cm}\begin{minipage}{0.2\textwidth}
+\centering
+	\vspace{-0.5cm}
+\includegraphics[height=1.6cm]{logo/logo_un}
+	\end{minipage}
 	\end{center}
 \end{minipage}
 \end{titlepage}%
