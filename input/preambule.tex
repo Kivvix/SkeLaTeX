@@ -35,8 +35,8 @@
 
 % ----------------------------------------------------------------------
 % bibliography
-%\usepackage[backend=biber, bibencoding=utf8 , sorting=none,hyperref=true,url=false,backref=true,backrefstyle=three]{biblatex}
-%\bibliography{input/biblio}
+\usepackage[backend=biber, bibencoding=utf8 , sorting=none,hyperref=true,url=false,backref=true,backrefstyle=three]{biblatex}
+\bibliography{input/biblio}
 
 % ----------------------------------------------------------------------
 % packages pour les figures
@@ -289,3 +289,6 @@
 \newcommand{\Cpp}{\emph{C++}}
 \newcommand{\Python}{\emph{Python}}
 \newcommand{\ROOT}{\texttt{ROOT}}
+
+\newcommand{\includeMd}[1]{\input{|"pandoc --wrap=preserve --listings -t latex #1"}}
+\def\tightlist{}
