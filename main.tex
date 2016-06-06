@@ -34,7 +34,7 @@
 \ 
 \vspace{5cm}
 \begin{flushright}
-	À Dillion Harper
+	À Bjarne Stroustrup
 \end{flushright}
 \vspace{10cm}
 \ 
@@ -54,6 +54,20 @@
 \vfill
 \ 
 
+%%% ABSRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{plain}
+
+\section*{Résumé -- Abstract}
+\addcontentsline{toc}{section}{Résumé -- Abstract}
+	\input{|"model/resume.sh input/resume.tex"}
+
+%%% TABLE OF CONTENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{plain}
+
+\tableofcontents{}
+\addcontentsline{toc}{section}{Table des matières}
 
 %%% LIST OF FIGURES AND TABLES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
@@ -66,24 +80,6 @@
 \listofalgorithms
 \lstlistoflistings
 
-
-%%% ABSRACT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\thispagestyle{plain}
-
-\section*{Résumé -- Abstract}
-\addcontentsline{toc}{section}{Résumé -- Abstract}
-	\input{|"model/resume.sh input/resume.tex"}
-
-
-%%% TABLE OF CONTENTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-\thispagestyle{plain}
-
-\tableofcontents{}
-\addcontentsline{toc}{section}{Table des matières}
-
-
 %%% GLOSSARY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \thispagestyle{plain}
@@ -92,7 +88,6 @@
 \addcontentsline{toc}{section}{Glossaire}
 	\input{|"model/gloss.sh"}
 
-
 %%% INTRODUCTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \renewcommand{\thepage}{\arabic{page}}
@@ -100,8 +95,6 @@
 
 \section{Introduction}
 \input{part/intro}
-
-
 
 %%% TEXT %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -132,17 +125,17 @@
 \section{Conclusion}
 \input{part/conclu}
 
-
 %%% BIBLIOGRAPHY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \thispagestyle{plain}
 \pagenumbering{alph}
 
-\section*{Bibliographie \& Webographie}
-\addcontentsline{toc}{section}{Bibliographie \& Webographie}
-\bibliographystyle{alpha}
+\section*{Références bibliographiques}
+
+\addcontentsline{toc}{section}{Références bibliographiques}
+
 \nocite{*}
-\bibliography{input/biblio}
+\printbibliography
 
 
 %%% ANNEXES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
